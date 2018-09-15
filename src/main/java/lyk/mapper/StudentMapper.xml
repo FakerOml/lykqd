@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lyk.mapper.StudentMapper">
+	<resultMap type="Student" id="student">
+		<id property="id" column="sid" />
+		<result property="name" column="sname" />
+		<result property="tid" column="tid" />
+	</resultMap>
+	<select id="selectStudent" resultMap="student">
+		select * from studentinfo
+		where sid = (#{id})
+	</select>
+	<!-- <delete id="deleteTalk"> delete from talk where openid = (#{openid}) 
+		</delete> <insert id="insertTalk"> insert into talk (openid,createtime,times,keyward) 
+		values ((#{openid}),(#{createtime}),(#{times}),(#{keyward})) </insert> -->
+</mapper>
