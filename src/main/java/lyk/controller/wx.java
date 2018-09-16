@@ -1,14 +1,6 @@
 package lyk.controller;
 
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
-import java.util.concurrent.TimeoutException;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +17,7 @@ import lyk.po.ReceiveXmlPojo;
 import lyk.service.IODealCenter;
 import lyk.util.XMLUtil;
 import net.sf.json.JSONObject;
+import org.apache.commons.dbcp.BasicDataSource;
 
 @Controller
 public class wx {
